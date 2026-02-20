@@ -1,0 +1,26 @@
+pluginManagement {
+	repositories {
+		maven { url = "https://maven.fabricmc.net/" }
+		maven { url = "https://maven.architectury.dev/" }
+		maven { url = "https://maven.shedaniel.me/" }
+		maven { url = "https://maven.terraformersmc.com/" }
+		gradlePluginPortal()
+		mavenCentral()
+	}
+}
+
+dependencyResolutionManagement {
+	// IMPORTANT: Loom needs to add its own project repositories for layered mappings.
+	// PREFER_SETTINGS breaks loom:mappings:layered+hash.*
+	repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+
+	repositories {
+		maven { url = "https://maven.fabricmc.net/" }
+		maven { url = "https://maven.architectury.dev/" }   // Cloth Config
+		maven { url = "https://maven.shedaniel.me/" }       // Cloth Config
+		maven { url = "https://maven.terraformersmc.com/" } // Mod Menu
+		mavenCentral()
+	}
+}
+
+rootProject.name = "rizzfarms-template-1.21.11"
